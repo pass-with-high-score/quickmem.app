@@ -1,13 +1,45 @@
-function openTab(event, tabId) {
-    // Hide all content sections
-    const sections = document.querySelectorAll('.content-section');
-    sections.forEach(section => section.classList.remove('active'));
+// ============================================
+// QuickMem — Mobile Navigation Toggle
+// ============================================
 
-    // Remove active class from all tabs
-    const tabs = document.querySelectorAll('.tab');
-    tabs.forEach(tab => tab.classList.remove('active'));
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('main-nav');
 
-    // Show the clicked tab's content
-    document.getElementById(tabId).classList.add('active');
-    event.target.classList.add('active');
-}
+  if (!menuToggle || !nav) return;
+
+  // Toggle menu open/close
+  menuToggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('nav-open');
+    menuToggle.classList.toggle('active', isOpen);
+    menuToggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  // Close menu when a nav link is clicked
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('nav-open');
+      menuToggle.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Close menu on resize above mobile breakpoint
+  const mediaQuery = window.matchMedia('(min-width: 769px)');
+  mediaQuery.addEventListener('change', (e) => {
+    if (e.matches) {
+      nav.classList.remove('nav-open');
+      menuToggle.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+      nav.classList.remove('nav-open');
+      menuToggle.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+});

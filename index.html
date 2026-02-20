@@ -1,296 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="QuickMem - Ứng dụng học tập tối ưu để làm chủ kiến thức với flashcards, bài kiểm tra, và các trò chơi học tập."
-    />
-    <meta
-      name="keywords"
-      content="học tập, flashcards, kiểm tra, học online, QuickMem, trò chơi học tập"
-    />
-    <meta name="author" content="QuickMem" />
-    <title>QuickMem</title>
-    <link rel="icon" href="images/logo.png" type="images/logo.png" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- Header Section -->
-    <header>
-      <div class="container">
-        <div class="logo">
-          <img src="images/logo.png" alt="QuickMem Logo" />
-          <span id="logo-text">QuickMem</span>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="#home" id="menu-home">Home</a></li>
-            <li><a href="#about" id="menu-about">Projects</a></li>
-            <li><a href="#team" id="menu-team">Team</a></li>
-            <li><a href="#download" id="menu-download">Download</a></li>
-            <li>
-              <a href="#source-code" id="menu-source-code">Source Code</a>
-            </li>
-            <li class="language-dropdown">
-              <a href="#" id="language-toggle">
-                <img
-                  src="images/english.png"
-                  alt="English Flag"
-                  id="flag-icon"
-                />
-                English
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="#" class="language-option" data-lang="en">
-                    <img src="images/english.png" alt="English Flag" /> English
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="language-option" data-lang="vi">
-                    <img src="images/vietnam.png" alt="Vietnamese Flag" />
-                    Vietnamese
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="QuickMem - Ứng dụng học tập tối ưu để làm chủ kiến thức với flashcards, bài kiểm tra, và các trò chơi học tập." />
+  <meta name="keywords" content="học tập, flashcards, kiểm tra, học online, QuickMem, trò chơi học tập" />
+  <meta name="author" content="QuickMem" />
+  <title>QuickMem</title>
+  <link rel="icon" href="images/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.png" alt="QuickMem Logo" />
+        <span id="logo-text">QuickMem</span>
       </div>
-    </header>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6" class="line-top"></line>
+          <line x1="3" y1="12" x2="21" y2="12" class="line-mid"></line>
+          <line x1="3" y1="18" x2="21" y2="18" class="line-bot"></line>
+        </svg>
+      </button>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="#home" id="menu-home">Home</a></li>
+          <li><a href="#about" id="menu-about">Projects</a></li>
+          <li><a href="#team" id="menu-team">Team</a></li>
+          <li><a href="#download" id="menu-download">Download</a></li>
+          <li>
+            <a href="#source-code" id="menu-source-code">Source Code</a>
+          </li>
+          <li class="language-dropdown">
+            <a href="#" id="language-toggle">
+              <img src="images/english.png" alt="English Flag" id="flag-icon" />
+              English
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#" class="language-option" data-lang="en">
+                  <img src="images/english.png" alt="English Flag" /> English
+                </a>
+              </li>
+              <li>
+                <a href="#" class="language-option" data-lang="vi">
+                  <img src="images/vietnam.png" alt="Vietnamese Flag" />
+                  Vietnamese
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Home Section (Hero Section) -->
-    <section id="home" class="hero">
-      <div class="content">
-        <h1 id="home-title">How do you want to learn?</h1>
-        <p id="home-description">
-          Master what you're learning, review what you've learned, take practice
-          tests, and<br />learn QuickMem activities.
-        </p>
-        <a href="#download" class="btn" id="download-button"
-          >Download study material</a
-        >
-
-        <div class="feature-cards">
-          <div class="feature-card" id="card-1">
-            <h3 id="card1-title">Learn</h3>
-            <div class="imgcard">
-              <img src="images/learn.png" alt="Học" />
-            </div>
-          </div>
-          <div class="feature-card" id="card-2">
-            <h3 id="card2-title">Flashcard</h3>
-            <img src="images/flashcard.png" alt="Thẻ ghi nhớ" />
-          </div>
-          <div class="feature-card" id="card-3">
-            <h3 id="card3-title">Check</h3>
-            <div class="imgcard">
-              <img src="images/check.png" alt="Kiểm tra" />
-            </div>
-          </div>
-          <div class="feature-card" id="card-4">
-            <h3 id="card4-title">Card Matching</h3>
-            <div class="imgcard">
-              <img src="images/cart-matching.png" alt="Ghép thẻ" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-      <div class="about-features">
-        <!-- First Feature Block -->
-        <div class="about-feature">
-          <div class="feature-text">
-            <h3 id="about-title1">
-              Multiple classes, multiple tests, one ultimate learning app
-            </h3>
-            <p id="about-description1">
-              Our learning application is developed with the aim of helping
-              learners absorb and retain knowledge effectively through
-              flashcards and learning games.
-            </p>
-          </div>
-          <div class="feature-image">
-            <img src="images/img1.png" alt="Feature 1 Image" />
-          </div>
-        </div>
-
-        <div class="about-feature-reverse">
-          <div class="feature-text" id="feature-text-tab2">
-            <h3 id="about-title2">Choose the way you want to learn</h3>
-            <p id="about-description2">
-              Turn flashcards into quizzes and more with study mode. Reinforce
-              your knowledge with learning games like Match.
-            </p>
-          </div>
-          <div class="feature-image">
-            <img src="images/img2.png" alt="Feature 2 Image" />
-          </div>
-        </div>
-
-        <div class="about-feature">
-          <div class="feature-text">
-            <h3 id="about-title3">Prepare for exams for any subject</h3>
-            <p id="about-description3">
-              Remember everything with practice tests and personalized study
-              sessions. 98% of students say QuickMem helped them understand
-              material better.
-            </p>
-          </div>
-          <div class="feature-image">
-            <img src="images/img3.png" alt="Feature 3 Image" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Team Section -->
-    <section id="team" class="team">
-      <h2 id="team-title">Team</h2>
-      <div class="team-container">
-        <div class="team-member">
-          <a href="https://github.com/nqmgaming" target="_blank">
-            <!-- Liên kết tới GitHub -->
-            <img
-              src="https://avatars.githubusercontent.com/u/94773751?v=4"
-              alt="Nguyễn Quang Minh"
-            />
-          </a>
-          <h5 class="github-username">
-            GitHub:
-            <a href="https://github.com/nqmgaming" target="_blank">nqmgaming</a>
-          </h5>
-          <h3 id="member1">Nguyễn Quang Minh</h3>
-          <p>Team Leader</p>
-        </div>
-        <div class="team-member">
-          <a href="https://github.com/Daocon" target="_blank">
-            <!-- Liên kết tới GitHub -->
-            <img
-              src="https://avatars.githubusercontent.com/u/134820492?v=4"
-              alt="Hà Văn Đạo"
-            />
-          </a>
-          <h5 class="github-username">
-            GitHub:
-            <a href="https://github.com/Daocon" target="_blank">Daocon</a>
-          </h5>
-          <h3 id="member2">Hà Văn Đạo</h3>
-          <p>Member</p>
-        </div>
-        <div class="team-member">
-          <a href="https://github.com/vanhai7868" target="_blank">
-            <!-- Liên kết tới GitHub -->
-            <img
-              src="https://avatars.githubusercontent.com/u/160410558?v=4"
-              alt="Nguyễn Văn Hải"
-            />
-          </a>
-          <h5 class="github-username">
-            GitHub:
-            <a href="https://github.com/vanhai7868" target="_blank"
-              >vanhai7868</a
-            >
-          </h5>
-          <h3 id="member3">Nguyễn Văn Hải</h3>
-          <p>Member</p>
-        </div>
-        <div class="team-member">
-          <a href="https://github.com/thinguyendinh04" target="_blank">
-            <!-- Liên kết tới GitHub -->
-            <img
-              src="https://avatars.githubusercontent.com/u/146194661?v=4"
-              alt="Nguyễn Đình Thi"
-            />
-          </a>
-          <h5 class="github-username">
-            GitHub:
-            <a href="https://github.com/thinguyendinh04" target="_blank"
-              >thinguyendinh04</a
-            >
-          </h5>
-          <h3 id="member4">Nguyễn Đình Thi</h3>
-          <p>Member</p>
-        </div>
-        <div class="team-member">
-          <a href="https://github.com/VuDucHuan2811" target="_blank">
-            <!-- Liên kết tới GitHub -->
-            <img
-              src="https://avatars.githubusercontent.com/u/130039564?v=4"
-              alt="Vũ Đức Huân"
-            />
-          </a>
-          <h5 class="github-username">
-            GitHub:
-            <a href="https://github.com/VuDucHuan2811" target="_blank"
-              >VuDucHuan2811</a
-            >
-          </h5>
-          <h3 id="member5">Vũ Đức Huân</h3>
-          <p>Member</p>
-        </div>
-        <div class="team-member">
-          <a href="https://github.com/nguyenVu401" target="_blank">
-            <!-- Liên kết tới GitHub -->
-            <img
-              src="https://avatars.githubusercontent.com/u/125819579?v=4"
-              alt="Vũ Hữu Nguyên"
-            />
-          </a>
-          <h5 class="github-username">
-            GitHub:
-            <a href="https://github.com/nguyenVu401" target="_blank"
-              >nguyenVu401</a
-            >
-          </h5>
-          <h3 id="member6">Vũ Hữu Nguyên</h3>
-          <p>Member</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Download Section -->
-    <section id="download" class="download">
-      <h2 id="download-title">Download</h2>
-      <div class="download-buttons">
-        <a href="https://play.google.com" class="btn download-btn google-play">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-            alt="Get it on Google Play"
-          />
-        </a>
-      </div>
-    </section>
-
-    <!-- Source Code Section -->
-    <section id="source-code" class="source-code">
-      <h2 id="source-code-title">Source code</h2>
-      <p id="source-code-description">
-        You can find the full source code for this project on GitHub.
+  <!-- Home Section (Hero Section) -->
+  <section id="home" class="hero">
+    <div class="content">
+      <h1 id="home-title">How do you want to learn?</h1>
+      <p id="home-description">
+        Master what you're learning, review what you've learned, take practice
+        tests, and<br />learn QuickMem activities.
       </p>
-      <a
-        href="https://github.com/pass-with-high-score/quick_mem"
-        class="btn github-logo"
-      >
-        <img
-          src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-          alt="GitHub Logo"
-        />
-        <span>View on GitHub</span>
+      <a href="#download" class="btn" id="download-button">Download study material</a>
+
+      <div class="feature-cards">
+        <div class="feature-card" id="card-1">
+          <h3 id="card1-title">Learn</h3>
+          <div class="imgcard">
+            <img src="images/learn.png" alt="Học" />
+          </div>
+        </div>
+        <div class="feature-card" id="card-2">
+          <h3 id="card2-title">Flashcard</h3>
+          <img src="images/flashcard.png" alt="Thẻ ghi nhớ" />
+        </div>
+        <div class="feature-card" id="card-3">
+          <h3 id="card3-title">Check</h3>
+          <div class="imgcard">
+            <img src="images/check.png" alt="Kiểm tra" />
+          </div>
+        </div>
+        <div class="feature-card" id="card-4">
+          <h3 id="card4-title">Card Matching</h3>
+          <div class="imgcard">
+            <img src="images/cart-matching.png" alt="Ghép thẻ" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="about-features">
+      <!-- First Feature Block -->
+      <div class="about-feature">
+        <div class="feature-text">
+          <h3 id="about-title1">
+            Multiple classes, multiple tests, one ultimate learning app
+          </h3>
+          <p id="about-description1">
+            Our learning application is developed with the aim of helping
+            learners absorb and retain knowledge effectively through
+            flashcards and learning games.
+          </p>
+        </div>
+        <div class="feature-image">
+          <img src="images/img1.png" alt="Feature 1 Image" />
+        </div>
+      </div>
+
+      <div class="about-feature-reverse">
+        <div class="feature-text" id="feature-text-tab2">
+          <h3 id="about-title2">Choose the way you want to learn</h3>
+          <p id="about-description2">
+            Turn flashcards into quizzes and more with study mode. Reinforce
+            your knowledge with learning games like Match.
+          </p>
+        </div>
+        <div class="feature-image">
+          <img src="images/img2.png" alt="Feature 2 Image" />
+        </div>
+      </div>
+
+      <div class="about-feature">
+        <div class="feature-text">
+          <h3 id="about-title3">Prepare for exams for any subject</h3>
+          <p id="about-description3">
+            Remember everything with practice tests and personalized study
+            sessions. 98% of students say QuickMem helped them understand
+            material better.
+          </p>
+        </div>
+        <div class="feature-image">
+          <img src="images/img3.png" alt="Feature 3 Image" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="team">
+    <h2 id="team-title">Team</h2>
+    <div class="team-container">
+      <div class="team-member">
+        <a href="https://github.com/nqmgaming" target="_blank">
+          <!-- Liên kết tới GitHub -->
+          <img src="https://avatars.githubusercontent.com/u/94773751?v=4" alt="Nguyễn Quang Minh" />
+        </a>
+        <h5 class="github-username">
+          GitHub:
+          <a href="https://github.com/nqmgaming" target="_blank">nqmgaming</a>
+        </h5>
+        <h3 id="member1">Nguyễn Quang Minh</h3>
+        <p>Team Leader</p>
+      </div>
+      <div class="team-member">
+        <a href="https://github.com/Daocon" target="_blank">
+          <!-- Liên kết tới GitHub -->
+          <img src="https://avatars.githubusercontent.com/u/134820492?v=4" alt="Hà Văn Đạo" />
+        </a>
+        <h5 class="github-username">
+          GitHub:
+          <a href="https://github.com/Daocon" target="_blank">Daocon</a>
+        </h5>
+        <h3 id="member2">Hà Văn Đạo</h3>
+        <p>Member</p>
+      </div>
+      <div class="team-member">
+        <a href="https://github.com/vanhai7868" target="_blank">
+          <!-- Liên kết tới GitHub -->
+          <img src="https://avatars.githubusercontent.com/u/160410558?v=4" alt="Nguyễn Văn Hải" />
+        </a>
+        <h5 class="github-username">
+          GitHub:
+          <a href="https://github.com/vanhai7868" target="_blank">vanhai7868</a>
+        </h5>
+        <h3 id="member3">Nguyễn Văn Hải</h3>
+        <p>Member</p>
+      </div>
+      <div class="team-member">
+        <a href="https://github.com/thinguyendinh04" target="_blank">
+          <!-- Liên kết tới GitHub -->
+          <img src="https://avatars.githubusercontent.com/u/146194661?v=4" alt="Nguyễn Đình Thi" />
+        </a>
+        <h5 class="github-username">
+          GitHub:
+          <a href="https://github.com/thinguyendinh04" target="_blank">thinguyendinh04</a>
+        </h5>
+        <h3 id="member4">Nguyễn Đình Thi</h3>
+        <p>Member</p>
+      </div>
+      <div class="team-member">
+        <a href="https://github.com/VuDucHuan2811" target="_blank">
+          <!-- Liên kết tới GitHub -->
+          <img src="https://avatars.githubusercontent.com/u/130039564?v=4" alt="Vũ Đức Huân" />
+        </a>
+        <h5 class="github-username">
+          GitHub:
+          <a href="https://github.com/VuDucHuan2811" target="_blank">VuDucHuan2811</a>
+        </h5>
+        <h3 id="member5">Vũ Đức Huân</h3>
+        <p>Member</p>
+      </div>
+      <div class="team-member">
+        <a href="https://github.com/nguyenVu401" target="_blank">
+          <!-- Liên kết tới GitHub -->
+          <img src="https://avatars.githubusercontent.com/u/125819579?v=4" alt="Vũ Hữu Nguyên" />
+        </a>
+        <h5 class="github-username">
+          GitHub:
+          <a href="https://github.com/nguyenVu401" target="_blank">nguyenVu401</a>
+        </h5>
+        <h3 id="member6">Vũ Hữu Nguyên</h3>
+        <p>Member</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download Section -->
+  <section id="download" class="download">
+    <h2 id="download-title">Download</h2>
+    <div class="download-buttons">
+      <a href="https://play.google.com/store/apps/details?id=com.pwhs.quickmem" class="btn download-btn google-play">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+          alt="Get it on Google Play" />
       </a>
-    </section>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-      <p id="footer-text">QuickMem - 2024</p>
-    </footer>
+  <!-- Source Code Section -->
+  <section id="source-code" class="source-code">
+    <h2 id="source-code-title">Source code</h2>
+    <p id="source-code-description">
+      You can find the full source code for this project on GitHub.
+    </p>
+    <a href="https://github.com/pass-with-high-score/quick_mem" class="btn github-logo">
+      <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" />
+      <span>View on GitHub</span>
+    </a>
+  </section>
 
-    <!-- JavaScript file -->
-    <script src="language-switcher.js"></script>
-  </body>
+  <!-- Footer -->
+  <footer>
+    <p id="footer-text">QuickMem - 2024</p>
+  </footer>
+
+  <!-- JavaScript files -->
+  <script src="js/scripts.js"></script>
+  <script src="language-switcher.js"></script>
+</body>
+
 </html>
