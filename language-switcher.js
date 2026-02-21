@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
       sourceCodeDescription:
         "Bạn có thể tìm thấy mã nguồn đầy đủ dự án này trên GitHub.",
       viewOnGitHub: "Xem trên GitHub",
-      footerText: "QuickMem - 2024",
+      footerText: "QuickMem - 2026",
     },
   };
 
